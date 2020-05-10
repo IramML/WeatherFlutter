@@ -8,7 +8,7 @@ class OpenWeatherMapAPI{
   Future<dynamic> getMexicoCityWeather() async{
     try{
       final mexicoCityID="3530597";
-      final url="http://api.openweathermap.org/data/2.5/forecast?id=$mexicoCityID&appid=${ConfigApp.openWeatherAppID}";
+      final url="http://api.openweathermap.org/data/2.5/forecast?id=$mexicoCityID&units=metric&appid=${ConfigApp.openWeatherAppID}";
 
       final response=await http.get(url);
       final parsed=jsonDecode(response.body);

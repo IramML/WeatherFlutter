@@ -15,7 +15,7 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    Timer timer=Timer(Duration(seconds: 3), (){
+    Timer(Duration(seconds: 3), (){
       Navigator.pushNamedAndRemoveUntil(context, "home", (_)=>false);
     });
     final responsive=Responsive(context);
